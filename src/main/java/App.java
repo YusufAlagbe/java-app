@@ -2,7 +2,12 @@ import io.javalin.Javalin;
 
 public class App {
     public static void main(String[] args) {
+
         Javalin app = Javalin.create().start(7000);
-        app.get("/", ctx -> ctx.result("Welcome to the Java web application!"));
+
+        app.get("/", ctx -> {
+            ctx.result("Welcome to the Java Web Application!");
+        });
+
     }
 }
